@@ -1,212 +1,124 @@
+# 🎓 Campus Course & Records Manager (CCRM)
 
-<h1 align="center">
-  <br>
-  Campus Course & Records Manager (CCRM)
-  <br>
-</h1>
+## Project Overview
 
-<p align="center">
-  <a href="https://github.com/njd07/Campus-Course-Records-Manager-CCRM">
-    <img src="https://img.shields.io/badge/version-1.0-blue.svg" alt="Version">
-  </a>
-  <a href="https://github.com/njd07/Campus-Course-Records-Manager-CCRM/issues">
-    <img src="https://img.shields.io/github/issues/njd07/Campus-Course-Records-Manager-CCRM.svg" alt="Issues">
-  </a>
-  <a href="https://github.com/njd07/Campus-Course-Records-Manager-CCRM/stargazers">
-    <img src="https://img.shields.io/github/stars/njd07/Campus-Course-Records-Manager-CCRM.svg" alt="Stars">
-  </a>
-</p>
+A Java console application called the **Campus Course & Records Manager (CCRM)** was created to manage student and course records for educational institutions.  It provides a hands-on example of fundamental Java SE concepts such as Streams API, modern file I/O with NIO.2, Object-Oriented Programming (OOP), and fundamental design patterns.
 
-<p align="center">
-  <a href="#key-features">Key Features</a> •
-  <a href="#requirements">Requirements</a> •
-  <a href="#how-to-use">Build & Run</a> •
-  <a href="#project-structure">Project Structure</a> •
-  <a href="#-evolution-of-java">Evolution of Java</a> •
-  <a href="#java-me-vs-se-vs-ee">Java ME vs SE vs EE</a> •
-  <a href="#jdk-jre-jvm-explained">JDK, JRE, JVM</a> •
-  <a href="#-mapping-syllabus--implementation">Mapping Syllabus → Implementation</a> •
-  <a href="#install-on-windows">Install on Windows</a> •
-  <a href="#screenshots">Screenshots</a>
-</p>
+ Using a command-line interface, the application enables an administrator to carry out the following tasks:
+ * **Manage Students**: List, add, and update students.
 
----
+ * **Manage Courses**: List, add, and search courses.
+ * **Manage Instructors**: Assign instructors to courses after adding them.
+ * **Manage Enrolment**: Apply business regulations, such as credit limits, when enrolling and unenrolling students in classes.
+ * **Transcripts & Grades**: Print student transcripts, calculate GPA, and assign grades.
+ * **File Utilities**: Make time-stamped backups and import/export data from/to CSV-like files.
 
-## Project Statement
+***
 
-Design and implement a console-based Java application called **Campus Course & Records Manager (CCRM)** that lets an institute manage:
+##  How to Run
 
-- Students (create/update, enroll/unenroll in courses, print transcripts)
-- Courses (create/update, list, search, assign instructors)
-- Grades & Transcripts (record marks, compute GPA, generate transcript view)
-- File Utilities (import/export CSV, backup course data with recursion)
-- Console Menu System (menu-driven workflow for all operations)
+### Prerequisites
+* **Java Development Kit (JDK)**: Version 17 or higher.
 
-This is a **Java SE project** built and run locally. It demonstrates OOP principles (Encapsulation, Inheritance, Abstraction, Polymorphism), Exception Handling, Java I/O (NIO.2 + Streams), Date/Time API, functional interfaces & lambdas, recursion, enums, and design patterns (Singleton, Builder).
+### Command-Line Instructions
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/falco1-plk/JavaVityarthiProject24BSA10135.git
+    cd CCRM
+    ```
+2.  **Compile the Project** (From the root `CCRM` directory)
+    ```bash
+    javac -d bin src/edu/ccrm/cli/CCRMApp.java
+    ```
+3.  **Run the Application**
+    ```bash
+    java -cp bin edu.ccrm.cli.CCRMApp
+    ```
 
----
+***
 
-## Key Features
+## ☕ The Evolution of Java
 
-- **Student Management** – add/list/update/deactivate students, print transcript
-- **Course Management** – create/list/update courses, search/filter by instructor/semester/department
-- **Enrollment & Grading** – enroll/unenroll, enforce max credits, record marks, compute GPA
-- **Import/Export CSV** – import student/course data, export records, backup with timestamped folders
-- **CLI Menu System** – simple interactive menu for all operations
-- **Advanced Java** – Streams, Lambdas, Enums, Custom Exceptions, Design Patterns
+* **1995**: Java 1.0 is released by Sun Microsystems, introducing the "Write Once, Run Anywhere" philosophy.
+* **2004**: **Java 5 (Tiger)** is a major release, adding significant language features like Generics, Enums, and Annotations.
+* **2014**: **Java 8** marks a revolutionary change, introducing Lambda Expressions, the Stream API, and a new Date/Time API (`java.time`).
+* **2021**: **Java 17** is released as the current primary LTS version, bringing further refinements like sealed classes and pattern matching.
 
----
+***
 
-## Requirements
-- JDK 17+
-- IDE: IntelliJ IDEA / Eclipse
+## ⚖️ Java ME vs. SE vs. EE
 
----
+| Feature | Java ME (Micro Edition) | Java SE (Standard Edition) | Java EE (Enterprise Edition) -> Jakarta EE |
+| :--- | :--- | :--- | :--- |
+| **Purpose** | Small, resource-constrained devices (e.g., embedded systems). | General-purpose desktop, server, and console applications. | Large-scale, distributed, web-based enterprise applications. |
+| **Core API** | A small subset of the Java SE API. | The core Java platform (`java.lang`, `java.util`, etc.). | Extends Java SE with APIs for the web (Servlets, JPA, etc.). |
+| **Example Use** | SIM cards, early mobile phone apps. | **This CCRM project**, desktop apps like IntelliJ IDEA. | E-commerce websites, banking systems. |
 
-## How To Use
+***
 
+## 🏗️ Java Architecture: JDK, JRE, & JVM
+
+The Java platform consists of three core components that work together.
+
+
+* **Java Virtual Machine (JVM)**: An abstract machine that offers the environment needed to run Java bytecode.  It converts native machine code from bytecode.
+ * **JRE (Java Runtime Environment)**: A software package containing everything needed to *run* a compiled Java application.  It comes with the Java Class Library and the JVM.
+ The full software development kit for developers is the **Java Development Kit (JDK)**.  The JRE, a **compiler** (`javac`), a **debugger** (`jdb`), and additional tools are included.
+
+ **Simply put**: To write code, you utilise the **JDK**.  A computer requires the **JRE** in order to execute that code.  The code is then run by the **JRE** using the **JVM**.
+***
+
+## 💻 Installation and Setup
+
+### Windows JDK Installation
+1.  **Download**: Get the JDK installer from [Oracle](https://www.oracle.com/java/technologies/downloads/) or [Adoptium (OpenJDK)](https://adoptium.net/).
+2.  **Install**: Run the installer.
+3.  **Set Environment Variables**: Set the `JAVA_HOME` system variable to your JDK path (e.g., `C:\Program Files\Java\jdk-17`) and add `%JAVA_HOME%\bin` to your `Path` variable.
+4.  **Verify**: Open a new Command Prompt and run `java -version`.
+
+    
+
+### Eclipse IDE Setup
+1.  **Download**: Get the "Eclipse Installer" and choose "Eclipse IDE for Java Developers".
+2.  **Create Project**: In Eclipse, go to `File` -> `New` -> `Java Project`.
+3.  **Run Application**: Right-click on `CCRMApp.java` -> `Run As` -> `Java Application`.
+
+    
+
+***
+
+## 🗺️ Syllabus Topic Mapping
+
+This table maps key Java concepts to their implementation within the CCRM project.
+
+| Concept/Topic | File(s) / Package | Example / Method / Line Reference |
+| :--- | :--- | :--- |
+| **Packages** | `edu.ccrm.*` | Project organized into logical packages (`cli`, `domain`, etc.). |
+| **OOP: Encapsulation** | `Person.java` | `private` fields with `public` getters and setters. |
+| **OOP: Inheritance** | `Student.java` | `public class Student extends Person { ... }` |
+| **OOP: Abstraction** | `Person.java`, `StudentService.java` | `public abstract class Person`, `public interface StudentService` |
+| **OOP: Polymorphism** | `CCRMApp.java` | A `Person` reference can hold a `Student` or `Instructor` object. |
+| **Design Pattern: Singleton**| `config/DataStore.java` | `private static instance;`, `private DataStore()`, `getInstance()` |
+| **Design Pattern: Builder**| `domain/Course.java` | Static nested `Builder` class for `Course` object creation. |
+| **Control Flow (if, switch)**| `cli/CCRMApp.java` | `if (choice == 1)`, `switch (choice)` in all menu methods. |
+| **Loops (while, for-each)** | `cli/CCRMApp.java` | `while (running)` main loop, `forEach` used for printing lists. |
+| **Enums with Constructors** | `domain/Grade.java` | `Grade(double gradePoint)` constructor and `gradePoint` field. |
+| **Interfaces** | `service/CourseService.java` | Defines the contract for course-related business logic. |
+| **Exception Handling** | `cli/CCRMApp.java` | Service calls in menus are wrapped in `try-catch` blocks. |
+| **Custom Exceptions** | `exception/StudentNotFoundException.java` | Custom exception for specific business errors. |
+| **File Input / Parsing** | `io/DataImporter.java` | **`Files.lines().skip(1).map(line -> line.split(","))` to read CSV.** |
+| **NIO.2 (File Output)** | `io/DataExporter.java` | Use of `Path`, `Paths`, `Files.write()`, and `Files.copy()`. |
+| **Streams API** | `service/EnrollmentServiceImpl.java` | `.stream().filter(...).collect(...)` for data processing. |
+| **Date/Time API** | `domain/Person.java` | Use of `LocalDate` for birth dates and `LocalDateTime` for timestamps. |
+| **Recursion** | `util/RecursiveFileUtils.java` | `calculateDirectorySize()` method calls itself for subdirectories. |
+
+***
+
+## 💡 Notes
+
+### Enabling Assertions
+Assertions are used to verify program invariants. To enable them, use the `-ea` flag when running from the command line.
 ```bash
-# Clone this repository
-git clone [https://github.com/njd07/Campus-Course-Records-Manager-CCRM.git](https:/adiiiiiiiiiiiii13/github.com//Campus-Course-Records-Manager-CCRM.git)
+# Example of running with assertions enabled
+java -cp bin -ea edu.ccrm.cli.CCRMApp
 
-# Go into the project directory
-cd Campus-Course-Records-Manager-CCRM
-
-# Compile the program
-javac src/edu/ccrm/CrmApp.java
-
-# Run the program
-java -cp src edu.ccrm.CrmApp
-
-Sample CSV data files are available inside `proj_data/`.
-
----
-
-## Project Structure
-
-```
-Campus-Course-Records-Manager-CCRM/
-├── ccrm_data/
-│   ├── courses_export.csv
-│   └── students_export.csv
-├── proj_data/
-│   ├── courses_sample.csv
-│   └── students_sample.csv
-├── screenshots/
-│   ├── file_struct.png
-│   ├── java_version_check.png
-│   ├── menu.png
-│   └── menu_test.png
-├── src/edu/ccrm
-│   ├── config/
-│   │   └── AppConfig.java
-│   ├── model/
-│   │   ├── Course.java
-│   │   ├── Enrollment.java
-│   │   ├── Grade.java
-│   │   ├── Instructor.java
-│   │   ├── Person.java
-│   │   ├── Semester.java
-│   │   └── Student.java
-│   ├── service/
-│   │   ├── CourseService.java
-│   │   ├── EnrollmentService.java
-│   │   └── StudentService.java
-│   ├── util/
-│   │   ├── exception/
-│   │   │   ├── DuplicateEnrollmentException.java
-│   │   │   └── MaxCreditLimitExceededException.java
-│   │   └── io/
-│   │       └── FileHandler.java
-│   └── CrmApp.java
-├── README.md
-└── Usage.md
-```
-
----
-
-## 🕰 Evolution of Java
-
-* **1995**: Java 1.0 – Write once, run anywhere
-* **1998**: Java 2 (J2SE, J2EE, J2ME introduced)
-* **2004**: Java 5 (Generics, Annotations, Enums)
-* **2014**: Java 8 (Streams, Lambdas, Date/Time API)
-* **2017**: Java 9 (Modules)
-* **2021–2025**: Java 17, 21 LTS – Records, Sealed Classes, Pattern Matching
-
----
-
-## Java ME vs SE vs EE
-
-| Edition                     | Purpose                                   | Example Use Cases                              |
-| --------------------------- | ----------------------------------------- | ---------------------------------------------- |
-| **ME (Micro Edition)**      | Lightweight, resource-constrained devices | Embedded systems, feature phones               |
-| **SE (Standard Edition)**   | Core Java libraries + APIs                | Desktop apps, CLI apps (like CCRM)             |
-| **EE (Enterprise Edition)** | Adds web, enterprise APIs                 | Servlets, JSP, Jakarta EE, enterprise backends |
-
----
-
-## JDK, JRE, JVM Explained
-
-* **JVM** (Java Virtual Machine): Executes compiled bytecode
-* **JRE** (Java Runtime Environment): JVM + libraries to *run* apps
-* **JDK** (Java Development Kit): JRE + compiler + dev tools to *build* apps
-
----
-
-## 📑 Mapping Syllabus → Implementation
-
-| Syllabus Topic                                 | Where in Project                                                            |
-| ---------------------------------------------- | --------------------------------------------------------------------------- |
-| OOP (Encapsulation, Inheritance, Polymorphism) | `Student.java`, `Instructor.java`, `Course.java`, `Person.java`             |
-| Abstraction (interfaces)                       | `service/StudentService.java`, `CourseService.java`                         |
-| Packages                                       | `edu.ccrm.model`, `edu.ccrm.service`, `edu.ccrm.util`                       |
-| Exception Handling                             | `DuplicateEnrollmentException.java`, `MaxCreditLimitExceededException.java` |
-| Collections Framework                          | `CourseService.java` and `EnrollmentService.java`                           |
-| Generics                                       | Service methods with `List<Student>` and `List<Course>`                     |
-| I/O (File, NIO.2)                              | `FileHandler.java`                                                          |
-| Threads/Concurrency                            | Backups and File operations with NIO.2                                      |
-| Date/Time API                                  | `Enrollment.java` uses `LocalDate`                                          |
-| Assertions                                     | Invariants in constructors (`assert id > 0`)                                |
-| Design Patterns                                | Singleton: `AppConfig.java`                                                 |
-
----
-
-# Install on Windows
-
-1. Download **JDK 17** from [Oracle](https://www.oracle.com/java/technologies/downloads/).
-2. Install and set environment variables:
-
-    * `JAVA_HOME=C:\Program Files\Java\jdk-17`
-    * Add `%JAVA_HOME%\bin` to `PATH`
-3. Verify installation:
-
-   ```
-   java -version
-   javac -version
-   ```
-4. Install **Eclipse IDE** or **IntelliJ IDEA**
-5. Import project and run `CrmApp.java`
-
----
-
-## Screenshots
-
-### 1. Java installation verification
-
-![java-version-check](screenshots/java_version_check.png)
-
-### 2. Project menu
-
-![menu](screenshots/menu.png)
-
-### 3. Project file structure
-
-![file-struct](screenshots/file_struct.png)
-
-### 4. Sample menu test
-
-![menu-test](screenshots/menu_test.png)
-
-
-<h3 align="center">✨ THANK YOU FOR CHECKING OUT THE PROJECT! ✨</h3> <p align="center">Feel free to open issues or contribute via pull requests.</p> 
