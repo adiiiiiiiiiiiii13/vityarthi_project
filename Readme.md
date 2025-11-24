@@ -67,7 +67,7 @@ This is a **Java SE project** built and run locally. It demonstrates OOP princip
 
 ```bash
 # Clone this repository
-git clone [https://github.com/njd07/Campus-Course-Records-Manager-CCRM.git](https://github.com/njd07/Campus-Course-Records-Manager-CCRM.git)
+git clone [https://github.com/njd07/Campus-Course-Records-Manager-CCRM.git](https:/adiiiiiiiiiiiii13/github.com//Campus-Course-Records-Manager-CCRM.git)
 
 # Go into the project directory
 cd Campus-Course-Records-Manager-CCRM
