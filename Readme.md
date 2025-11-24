@@ -1,3 +1,4 @@
+
 <h1 align="center">
   <br>
   Campus Course & Records Manager (CCRM)
@@ -66,7 +67,7 @@ This is a **Java SE project** built and run locally. It demonstrates OOP princip
 
 ```bash
 # Clone this repository
-git clone https://github.com/njd07/Campus-Course-Records-Manager-CCRM.git
+git clone [https://github.com/njd07/Campus-Course-Records-Manager-CCRM.git](https://github.com/njd07/Campus-Course-Records-Manager-CCRM.git)
 
 # Go into the project directory
 cd Campus-Course-Records-Manager-CCRM
@@ -76,7 +77,6 @@ javac src/edu/ccrm/CrmApp.java
 
 # Run the program
 java -cp src edu.ccrm.CrmApp
-```
 
 Sample CSV data files are available inside `proj_data/`.
 
